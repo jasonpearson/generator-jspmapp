@@ -1,0 +1,26 @@
+{
+  "name": "generator-jspmsimple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "app",
+    "router"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "jspm"
+  ],
+  "author": "Jason Pearson",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "path": "^0.11.14",
+    "util": "^0.10.3",
+    "yeoman-generator": "^0.20.3",
+    "yosay": "^1.0.5"
+  }
+}
