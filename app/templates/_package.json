@@ -18,12 +18,13 @@
       "baseURL": "src"
     },
     "dependencies": {
+      "css": "npm:jspm-loader-css-modules@1.0.0",
       "react": "npm:react@^0.13.3"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.8.22",
-      "babel-runtime": "npm:babel-runtime@^5.8.20",
-      "core-js": "npm:core-js@^1.1.0"
+      "babel": "npm:babel-core@^5.8.25",
+      "babel-runtime": "npm:babel-runtime@^5.8.25",
+      "core-js": "npm:core-js@^1.2.0"
     }
   }
 }

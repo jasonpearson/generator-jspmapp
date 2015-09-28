@@ -48,7 +48,10 @@ module.exports = yeoman.generators.Base.extend({
       );
     }
 
+    this.template('src/bundle.css', 'src/bundle.css');
+    this.template('src/main/main.css', 'src/main/main.css');
     this.template('src/components/my-component.js', 'src/components/my-component.js');
+    this.template('src/components/my-component.css', 'src/components/my-component.css');
     this.fs.copyTpl(
       this.templatePath('server'),
       this.destinationPath('server')
@@ -56,7 +59,9 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install: function () {
-    this.spawnCommand('npm', ['install']);
-    this.spawnCommand('jspm', ['install']);
+    var npmInstall = this.spawnCommand('npm', ['install']);
+    npmInstall.on('close', function() {
+      this.spawnCommand('jspm', ['install']);
+    }.bind(this));
   }
 });
